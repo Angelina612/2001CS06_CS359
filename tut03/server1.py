@@ -10,14 +10,14 @@ print ('The server is ready to receive')
 
 while True:
     connectionSocket, addr = serverSocket.accept()
-    print('Connected with client')
+    print('Connected with client ', addr, sep='')
     while True:
         expression = connectionSocket.recv(1024).decode()
 
         if not expression:
             break
 
-        print('Client socket ',addr, 'sent message: ',expression, sep='')
+        print('Client ',addr, ' sent message: ',expression, sep='')
 
         try:
             message = eval(expression)
