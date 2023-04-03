@@ -44,7 +44,7 @@ while inputs:
 
             else:
                 # A readable client socket has data
-                print('Client ',addr, ' sent message: ',data, sep='')
+                print('Client ', s.getpeername(), ' sent message: ',data, sep='')
 
                 message_queues[s].put(data)
                 # Add output channel for response

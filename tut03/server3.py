@@ -44,7 +44,7 @@ while inputs:
 
             else:
                 # A readable client socket has data
-                print('Client ',addr, ' sent message: ',expression, sep='')
+                print('Client ', s.getpeername(), ' sent message: ',expression, sep='')
 
                 try:
                     answer = eval(expression)
